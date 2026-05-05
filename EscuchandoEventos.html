@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row  p-5">
+            <div class="col-6 border text text-center bg-light"> 
+                <h1 id="titulo">ESCUCHANDO EVENTOS</h1>
+                <button id="btn" class="btn btn-success p-2 m-3">Escuchar un Evento</button>
+                <button id="btn2" class="btn btn-danger p-2 m-3">Cambiar Titulo</button>
+            </div>
+            <div class="col-6">
+                <h1>Otros Tipos de Eventos</h1>
+                
+                <input id="input" type="text" placeholder="Ingrese un texto aqui" class="form-control">
+                <h3 class="text-center" id="res"> ...</h3>
+            </div>
+            <div class="col-12">
+                <div id="padre" class="p-5 bg-info">
+                <button id="hijo" class="form-control btn btn-dark">Click</button>
+</div>
+            </div>
+        </div>
+    </div>
+    <script src="js/apps.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
