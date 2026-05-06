@@ -1,8 +1,8 @@
 let boton = document.getElementById("btn-api");
-
+traerPokemon();
 function traerPokemon() {
 
-    // 🎲 número aleatorio
+    // número aleatorio
     let numero = Math.floor(Math.random() * 151) + 1;
 
     fetch(`https://pokeapi.co/api/v2/pokemon/${numero}`)
@@ -11,24 +11,22 @@ function traerPokemon() {
 
             console.log(data);
 
-            // 🖼️ imagen
+            // imagen
 
             document.getElementById("poke-img").src = data.sprites.other["official-artwork"].front_default;
 
-            // 🏷️ nombre
+            // nombre
             document.getElementById("poke-nombre").innerText = data.name;
 
-            // 🔢 id
+            // id
             document.getElementById("poke-id").innerText = "ID: " + data.id;
 
             let habilidades = data.abilities
                 .map(a => a.ability.name)
                 .join(", ");
 
-            document.getElementById("poke-habilidades").innerText =
-                "Habilidades: " + habilidades;
+            document.getElementById("poke-habilidades").innerText ="Habilidades: " + habilidades;
 
         });
 }
-
 boton.addEventListener("click", traerPokemon);
