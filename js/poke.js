@@ -21,11 +21,7 @@ function traerPokemon() {
             // id
             document.getElementById("poke-id").innerText = "ID: " + data.id;
 
-            let habilidades = data.abilities
-                .map(a => a.ability.name)
-                .join(", ");
-
-            document.getElementById("poke-habilidades").innerText ="Habilidades: " + habilidades;
+           
 
         });
 }
